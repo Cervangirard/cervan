@@ -5,33 +5,24 @@
 #' @return file
 #' @export
 #'
+#' @importFrom stats setNames
+#' @importFrom utils file.edit
+#'
 
-creat_file <- function(path){
+create_file <- function(path){
   file.create(path)
   file.edit(path)
 }
 
 
+#' Doc and reload
+#'
+#' @param package path of pkg
+#'
+#' @importFrom devtools document
+#' @importFrom pkgload load_all
 
-#' Charger des csv2
-#'
-#' @param path chemin du fichier pour csv2
-#'
-#' @return list
-#' @export
-#'
-
-charger_csv <- function(path){
-  # browser()
-  fichier <- list.files(path,full.names = TRUE,pattern = ".csv")
-  names_fichier <- stringr::str_match(pattern = "([:alnum:]+).csv$",fichier)
-  names_fichier <- names_fichier[,2]
-  mes_fichiers <- list()
-  for(i in fichier){
-    mes_fichiers[[i]] <- read_csv2(i)
-  }
-  mes_fichiers <- setNames(mes_fichiers,names_fichier)
-  mes_fichiers
+load_pkg <- function(package = "."){
+  document(pkg = package)
+  load_all(path = package)
 }
-
-

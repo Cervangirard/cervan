@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 .Rhistory
 .Rdata
+^devstuff\.R$
+^\.gitlab-ci\.yml$
+^LICENSE\.md$
