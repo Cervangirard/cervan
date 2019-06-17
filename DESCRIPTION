@@ -13,4 +13,5 @@ Imports:
     magrittr,
     golem,
     devtools,
-    pkgload
+    pkgload,
+    usethis
