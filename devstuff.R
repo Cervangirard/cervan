@@ -12,6 +12,7 @@ usethis::use_package("golem")
 usethis::use_package("devtools")
 usethis::use_package("pkgload")
 usethis::use_package("usethis")
+usethis::use_package("rstudioapi")
 
 usethis::use_build_ignore("devstuff.R")
 usethis::use_build_ignore(".gitlab-ci.yml")

@@ -9,7 +9,8 @@
 #' @export
 #'
 #' @importFrom golem fill_desc
-cervan_desc <- function(name_pkg,title_pkg, desc_pkg, mail_pro = TRUE, repo_git = NULL){
+#' @importFrom pkgload pkg_name
+cervan_desc <- function(name_pkg = pkg_name(),title_pkg, desc_pkg, mail_pro = TRUE, repo_git = NULL){
   if (mail_pro){
     mail <- "cervan@thinkr.fr"
   }else{

@@ -4,8 +4,8 @@
 \alias{cervan_desc}
 \title{Add description}
 \usage{
-cervan_desc(name_pkg, title_pkg, desc_pkg, mail_pro = TRUE,
-  repo_git = NULL)
+cervan_desc(name_pkg = pkg_name(), title_pkg, desc_pkg,
+  mail_pro = TRUE, repo_git = NULL)
 }
 \arguments{
 \item{name_pkg}{Name of the package}

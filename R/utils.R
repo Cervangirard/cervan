@@ -19,6 +19,8 @@ create_file <- function(path){
 #'
 #' @param package path of pkg
 #'
+#' @export
+#'
 #' @importFrom devtools document
 #' @importFrom pkgload load_all
 
