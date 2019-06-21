@@ -5,11 +5,10 @@
 #'
 add_gitlab_ci <- function(){
   cat(
-"image: r-base
+"image: rocker/tidyverse
 
 test:
   script:
-    - R -e \"install.packages('devtools')\"
     - R -e 'devtools::install_deps(dependencies = TRUE)'
     - R CMD build . --no-build-vignettes --no-manual
     - R CMD check *tar.gz --no-build-vignettes --no-manual",
