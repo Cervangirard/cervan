@@ -8,6 +8,9 @@
 #' @examples
 #' add_devstuff()
 add_devstuff <- function() {
+
+
+
   if (isAvailable()) {
     path_dir <- rstudioapi::getActiveProject()
     if (is.null(path_dir)) {
@@ -18,12 +21,17 @@ add_devstuff <- function() {
   } else{
     path_file <- "devstuff.R"
   }
+
+  if(file.exists(path_file)){
+    stop("File devstuff.R already exists. :)")
+  }
   cat(
-    "# File to dev your packages
-    # Run this code ton ignore this file
-    usethis::use_build_ignore('devstuff.R')",
+"# File to dev your packages
+# Run this code ton ignore this file
+usethis::use_build_ignore('devstuff.R')",
     file = path_file
   )
-  file.edit(path_file)
-
+  if (isAvailable()) {
+  navigateToFile(path_file)
+    }
 }
