@@ -8,9 +8,6 @@
 #' @examples
 #' add_devstuff()
 add_devstuff <- function() {
-
-
-
   if (isAvailable()) {
     path_dir <- rstudioapi::getActiveProject()
     if (is.null(path_dir)) {
