@@ -5,13 +5,15 @@
 #' @return file
 #' @export
 #'
-#' @importFrom stats setNames
 #' @importFrom utils file.edit
+#' @importFrom rstudioapi isAvailable navigateToFile
 #'
 
 create_file <- function(path){
   file.create(path)
-  file.edit(path)
+  if (isAvailable()) {
+    navigateToFile(path)
+  }
 }
 
 

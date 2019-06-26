@@ -8,22 +8,21 @@
 #'
 #' @export
 #'
-#' @importFrom golem fill_desc
 #' @importFrom pkgload pkg_name
+#' @import desc
+#'
 cervan_desc <- function(name_pkg = pkg_name(),title_pkg, desc_pkg, mail_pro = TRUE, repo_git = NULL){
   if (mail_pro){
     mail <- "cervan@thinkr.fr"
   }else{
     mail <- "cervan.girard@gmail.com"
   }
-
-  fill_desc(
-    pkg_name = name_pkg, # The Name of the package containing the App
-    pkg_title = title_pkg, # The Title of the package containing the App
-    pkg_description = desc_pkg, # The Description of the package containing the App
-    author_first_name = "Cervan", # Your First Name
-    author_last_name = "Girard",  # Your Last Name
-    author_email = mail,      # Your Email
-    repo_url = repo_git # The (optional) URL of the GitHub Repo
-  )
+  desc <- description$new()
+  desc$set(Package = name_pkg,
+           Title = title_pkg,
+           Description = desc_pkg)
+  desc$add_author("Cervan", "Girard", email = mail)
+  if(!is.null(repo_git)){
+  desc$set("URL", repo_git)
+  }
 }
