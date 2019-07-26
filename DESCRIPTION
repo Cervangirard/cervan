@@ -2,7 +2,7 @@ Package: cervan
 Title: M'aider Dans Ma Vie
 Version: 0.0.1.0000
 Authors@R: person("Cervan", "Girard", email = "cervan.girard@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Nothing really serious.
 Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
