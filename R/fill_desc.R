@@ -25,4 +25,5 @@ cervan_desc <- function(name_pkg = pkg_name(),title_pkg, desc_pkg, mail_pro = TR
   if(!is.null(repo_git)){
   desc$set("URL", repo_git)
   }
+  desc$write()
 }
