@@ -11,12 +11,12 @@ add_devstuff <- function() {
   if (isAvailable()) {
     path_dir <- rstudioapi::getActiveProject()
     if (is.null(path_dir)) {
-      path_file <- "devstuff.R"
+      path_file <- "devstuff_hisotry.R"
     } else{
-      path_file <- file.path(path_dir, "devstuff.R")
+      path_file <- file.path(path_dir, "devstuff_hisotry.R")
     }
   } else{
-    path_file <- "devstuff.R"
+    path_file <- "devstuff_hisotry.R"
   }
 
   if(file.exists(path_file)){

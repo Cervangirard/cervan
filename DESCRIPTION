@@ -1,18 +1,25 @@
 Package: cervan
 Title: M'aider Dans Ma Vie
 Version: 0.0.1.0000
-Authors@R: person("Cervan", "Girard", email = "cervan.girard@gmail.com", role = c("aut", "cre"))
+Authors@R: 
+    person(given = "Cervan",
+           family = "Girard",
+           role = c("aut", "cre"),
+           email = "cervan.girard@gmail.com")
 Description: Nothing really serious.
-Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
+Depends: 
+    R (>= 3.6.0)
+Imports: 
+    desc,
+    lubridate,
+    magrittr,
+    pkgload,
+    rstudioapi,
+    togglr,
+    usethis,
+    utils
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
-Imports: 
-    magrittr,
-    desc,
-    devtools,
-    pkgload,
-    usethis,
-    rstudioapi
+RoxygenNote: 6.1.99.9001

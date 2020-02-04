@@ -17,16 +17,3 @@ create_file <- function(path){
 }
 
 
-#' Doc and reload
-#'
-#' @param package path of pkg
-#'
-#' @export
-#'
-#' @importFrom devtools document
-#' @importFrom pkgload load_all
-
-load_pkg <- function(package = "."){
-  document(pkg = package)
-  load_all(path = package)
-}

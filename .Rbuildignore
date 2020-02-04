@@ -5,3 +5,4 @@
 ^devstuff\.R$
 ^\.gitlab-ci\.yml$
 ^LICENSE\.md$
+^\.gitlab$
