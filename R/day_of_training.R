@@ -33,7 +33,7 @@ day_of_training <- function(name_tranning, day, token = Sys.getenv("TOGGL_TOKEN"
   message("Done !")
 }
 
-#' Find the goog formation
+#' Find the google formation
 #'
 #' @param name_training name of training
 #' @param token token to toggl
