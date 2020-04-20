@@ -1,9 +1,0 @@
-image: rocker/tidyverse
-
-test:
-  script:
-    - apt update
-    - apt install libsodium-dev
-    - R -e 'devtools::install_deps(dependencies = TRUE)'
-    - R CMD build . --no-build-vignettes --no-manual
-    - R CMD check *tar.gz --no-build-vignettes --no-manual

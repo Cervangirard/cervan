@@ -1,7 +1,8 @@
-#' Title
+#' Add Training
 #'
 #' @param name_tranning name of training
 #' @param day which day
+#' @param token token toggl
 #'
 #' @importFrom lubridate ymd_hms
 #' @importFrom togglr get_project_id toggl_create
@@ -20,7 +21,7 @@ day_of_training <- function(name_tranning, day, token = Sys.getenv("TOGGL_TOKEN"
 
   start <- paste(day, " 09:00:00")
   end <- paste(day, " 16:00:00")
-  suppressMessages(
+  suppressWarnings(
     toggl_create(
     description = "Formation",
     pid = id_project,
@@ -32,9 +33,10 @@ day_of_training <- function(name_tranning, day, token = Sys.getenv("TOGGL_TOKEN"
   message("Done !")
 }
 
-#' Title
+#' Find the goog formation
 #'
 #' @param name_training name of training
+#' @param token token to toggl
 #'
 #' @importFrom togglr get_all_project_names get_project_id
 #' @importFrom utils menu

@@ -6,3 +6,5 @@
 ^\.gitlab-ci\.yml$
 ^LICENSE\.md$
 ^\.gitlab$
+^\.github$
+^README\.Rmd$

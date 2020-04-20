@@ -4,7 +4,7 @@
 \alias{find_your_training}
 \title{Title}
 \usage{
-find_your_training(name_training)
+find_your_training(name_training, token)
 }
 \arguments{
 \item{name_training}{name of training}
