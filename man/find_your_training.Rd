@@ -2,13 +2,15 @@
 % Please edit documentation in R/day_of_training.R
 \name{find_your_training}
 \alias{find_your_training}
-\title{Title}
+\title{Find the goog formation}
 \usage{
 find_your_training(name_training, token)
 }
 \arguments{
 \item{name_training}{name of training}
+
+\item{token}{token to toggl}
 }
 \description{
-Title
+Find the goog formation
 }
