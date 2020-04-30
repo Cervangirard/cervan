@@ -21,7 +21,7 @@ cervan_desc <- function(name_pkg = pkg_name(),title_pkg, desc_pkg, mail_pro = TR
   desc$set(Package = name_pkg,
            Title = title_pkg,
            Description = desc_pkg)
-  desc$add_me("Cervan", "Girard", email = mail)
+  desc$add_author("Cervan", "Girard", email = mail)
   if(!is.null(repo_git)){
   desc$set("URL", repo_git)
   }
